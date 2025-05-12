@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+
+# Entornos
+.env
+
+# macOS o VS Code
+.DS_Store
+.vscode/

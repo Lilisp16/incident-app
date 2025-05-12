@@ -1,0 +1,324 @@
+/* Asegura que el body y el html ocupen el 100% del ancho y alto */
+html, body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Asegura que el menú de navegación ocupe el 100% del ancho del contenedor */
+nav.navbar {
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding y bordes en el cálculo del ancho */
+}
+
+/* Estilo para los elementos de la barra de navegación */
+.navbar-nav {
+    flex-direction: row; /* Alinea los elementos en una fila */
+    width: 100%; /* Asegura que el contenedor de los elementos ocupe el 100% del ancho */
+}
+
+.nav-item {
+    margin: 0; /* Elimina el margen entre los elementos */
+}
+
+
+
+/* Estilo para el contenedor de la tabla para permitir el scroll horizontal */
+.table-container {
+    overflow-x: auto; /* Permite el scroll horizontal */
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
+    -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en dispositivos táctiles */
+}
+
+/* Asegura que el contenedor del main permita el desplazamiento */
+main {
+    overflow-x: auto; /* Permite el scroll horizontal si es necesario */
+    padding: 0 15px;; /* Elimina el padding si es necesario para evitar problemas de ancho */
+ 
+}
+
+/* Asegura que la tabla ocupe el ancho adecuado dentro del contenedor */
+#incident-table {
+    width: 100%; /* Ajusta la tabla al ancho del contenedor */
+    border-collapse: collapse; /* Asegura que las celdas de la tabla se colapsen en un solo borde */
+}
+
+
+/* Asegura que el body tenga un fondo adecuado */
+
+
+#incident-table {
+    border: 5px solid #1b95db49; /* Borde de 15px de grosor */
+    border-radius: 5px; /* Esquinas redondeadas */
+    background: rgba(114, 236, 252, 0.4); /* Fondo con opacidad */
+}
+
+/*agregar esta clase a h1 index*/
+.titulo {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    width: 100%; /* Asegura que el título ocupe el ancho completo del contenedor */
+    text-shadow: 4px 3px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+
+         /* --- estilos para INCIDENT ---*/
+/* Estilos generales */
+.bodyform{
+    background-color: rgba(223, 114, 19, 0.674);
+}
+
+.cardf {
+    width: 90%; /* Usar porcentaje en lugar de una unidad fija para mejor responsividad */
+    max-width: 500px; /* Limita el ancho máximo para pantallas más grandes */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+
+.cardf-body {
+    padding: 20px;
+}
+
+
+
+.p-4.d-flex.flex-row.justify-content-around {
+    padding: 0; /* Elimina padding extra que podría desbordar en pantallas pequeñas */
+    flex-direction: column; /* Alinea los botones en columna para pantallas pequeñas */
+}
+
+button[type="button"] {
+    width: 100%; /* Asegura que el botón ocupe todo el ancho disponible en pantallas pequeñas */
+    margin-bottom: 10px; /* Espacio entre el botón y otros elementos */
+    padding: 10px;
+    
+}
+
+
+
+
+/* Estilos para las tarjetas del dashboard */
+
+
+/*.card {
+    background-color: rgba(24, 19, 19, 0.776);
+    margin: 20px; /* Elimina cualquier margen extra
+    
+}*/
+
+/* Mantén el diseño original sin alteraciones */
+.card {
+    background-color: rgba(24, 19, 19, 0.776); /* Fondo original */
+    margin: 20px;
+    transition: transform 0.7s ease; /* Suaviza la rotación */
+    transform-style: preserve-3d; /* Permite el efecto 3D */
+    cursor: pointer; /* Cambia el cursor para indicar interactividad */
+    position: relative; /* Necesario para aplicar el 3D */
+}
+
+/* Añadir la perspectiva para el efecto 3D */
+.card:hover {
+    background-color: rgb(101, 11, 161); ;
+    transform: rotateY(360deg); /* Voltea la tarjeta en el eje Y */
+}
+
+/* Al pasar el mouse sobre la tarjeta, se cambia el estilo del número */
+.card:hover .card-title {
+    color: white !important; /* El número se vuelve blanco */
+    font-size: 5rem; /* El número se hace más grande */
+}
+
+/* Oculta el texto original cuando el mouse está sobre la tarjeta */
+.card:hover .card-body p {
+    display: none; /* Esconde el texto original */
+}
+
+/* Oculta el texto en el card-header solo cuando el mouse pasa sobre la tarjeta */
+.card:hover .card-header {
+    visibility: hidden; /* Hace que el encabezado sea invisible */
+}
+
+
+
+
+
+
+.card-header {
+    color: rgb(101, 11, 161);
+    font-size: 0.8rem;
+    font-weight: bold;
+
+}
+
+
+.card-title {
+    font-size: 2.5rem; /* Aumentar el tamaño del número */
+    font-weight: bold;
+  
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el contenedor 3D sin cambiar el fondo */
+.row.mb-4.justify-content-center {
+    background-color: #0f0f0f;
+    position: relative;
+    padding: 20px;
+    margin: 20px auto; /* Centrado automático */
+    box-sizing: border-box;
+    border-radius: 12px; /* Bordes redondeados */
+    
+    /* Sombra para crear la sensación de profundidad */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1), 
+                0 25px 40px rgba(0, 0, 0, 0.2); /* Sombras más suaves y profundas */
+
+    /* Transición para dar suavidad en el cambio */
+    transition: all 0.3s ease;
+}
+
+
+/*css botones tabla*/
+
+.btn-custom {
+    font-size: 12px;    /* Cambiar el tamaño de la fuente */
+    padding: 8px 15px;  /* Ajuste de padding para un diseño más armónico */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 2px solid transparent; /* Borde transparente para cuando se pase el cursor */
+    background-color: #f44336; /* Fondo rojo (puedes cambiarlo según lo que necesites) */
+    color: white; /* Color de texto blanco */
+    font-weight: bold; /* Hacer el texto un poco más audaz */
+    transition: all 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.btn-custom:hover {
+    background-color: #d32f2f; /* Un tono más oscuro al pasar el ratón */
+    border-color: #b71c1c; /* Borde con color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de agrandamiento sutil */
+}
+
+.btn-custom:active {
+    background-color: #c62828; /* Fondo aún más oscuro al hacer clic */
+    transform: scale(1); /* Resetear el agrandamiento al hacer clic */
+}
+
+
+.btn-custom2 {
+    font-size: 12px;    /* Cambiar el tamaño de la fuente */
+    padding: 8px 15px;  /* Ajuste de padding para un diseño más armónico */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 2px solid transparent; /* Borde transparente para cuando se pase el cursor */
+    background-color: #0fc640; /* Fondo rojo (puedes cambiarlo según lo que necesites) */
+    color: white; /* Color de texto blanco */
+    font-weight: bold; /* Hacer el texto un poco más audaz */
+    transition: all 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.btn-custom2:hover {
+    background-color: #0e942f; /* Un tono más oscuro al pasar el ratón */
+    border-color: #0e942f; /* Borde con color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de agrandamiento sutil */
+}
+
+.btn-custom2:active {
+    background-color: #29690e; /* Fondo aún más oscuro al hacer clic */
+    transform: scale(1); /* Resetear el agrandamiento al hacer clic */
+}
+
+
+
+
+/*para segundo grafico para severidad*/
+
+/* Ajustar el tamaño del gráfico */
+.chart-container {
+   
+    margin-top: 30px;
+    padding: 15px;
+  }
+  
+  .chart-container .row {
+    justify-content: center;
+  }
+ 
+
+
+
+
+
+/* Ajustes adicionales para pantallas pequeñas */
+@media (max-width: 400px) {
+    .cardf {
+        width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho de la pantalla en dispositivos pequeños */
+    }
+}
+
+
+
+/* Ajustes adicionales para pantallas pequeñas */
+@media (max-width: 400px) {
+    .card {
+        width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho de la pantalla en dispositivos pequeños */
+    }
+}
+
+/* --- Estilos adicionales para otros tamaños de pantallas --- */
+
+/* Para pantallas entre 576px y 768px (tabletas pequeñas y grandes) */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Los elementos de la barra de navegación se apilan en pantallas medianas */
+    }
+
+    /* Ajustar la card para que ocupe más espacio en pantallas intermedias */
+    .card {
+        width: 80%; /* Permite que la card ocupe un poco más de espacio */
+    }
+}
+
+/* Para pantallas entre 768px y 1200px (tabletas y computadoras de escritorio pequeñas) */
+@media (max-width: 1200px) {
+    .navbar-nav {
+        flex-direction: row; /* Los elementos de la barra de navegación se alinean en fila */
+    }
+
+    .card {
+        width: 70%; /* Ajusta el ancho de la card a un tamaño razonable */
+    }
+}
+
+/* Para pantallas grandes de escritorio */
+@media (min-width: 1200px) {
+    .navbar-nav {
+        flex-direction: row; /* Mantenemos los elementos de la barra de navegación en una fila */
+    }
+
+    .card {
+        width: 50%; /* Reduce el tamaño de la card para pantallas grandes */
+    }
+}
+
+
+/* Asegura que el contenido del menú se ajuste bien en diferentes tamaños de pantalla */
+@media (max-width: 576px) {
+    .navbar-nav {
+        flex-direction: column; /* En pantallas pequeñas, muestra los elementos en una columna */
+    }
+}
+
+
